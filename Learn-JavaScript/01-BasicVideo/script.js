@@ -3,7 +3,10 @@ async function start() {
   try {
     // 请求音频和视频流
     const stream = await navigator.mediaDevices.getUserMedia({
-      video: true,
+      video: {
+        width: 1280,
+        height: 720,
+      },
       audio: true,
     });
 
